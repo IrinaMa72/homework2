@@ -34,14 +34,16 @@ public class Main {
         System.out.println("Вес спорт-завтрака " + weightProducts + " гр или " + weightInKilogram + " кг!");
 
         //Задание 4
-        float purpose = 7000;
-        float loseWeightBy250 = 250;
-        float loseWeightBy500 = 500;
-        float dayForWeightLossOf250 = purpose / loseWeightBy250;
-        float dayForWeightLossOf500 = purpose / loseWeightBy500;
-        System.out.println("Если спортсмен будет худеть по 250 грамм в день понадобится " + dayForWeightLossOf250 + " дней.");
-        System.out.println("А если спортсмен будет худеть по 500 грамм в день то уйдет " + dayForWeightLossOf500 + " дней.");
-        float averageDays = purpose / ((loseWeightBy250 + loseWeightBy500) /2);
+        int purpose = 7;
+        int gramsInKilo = 1000;
+        int weightGram = purpose * gramsInKilo;
+        int minLoseWeight = 250;
+        int maxLoseWeight = 500;
+        int minDay = weightGram / minLoseWeight;
+        int maxDay = weightGram / maxLoseWeight;
+        System.out.println("Если спортсмен будет худеть по 250 грамм в день понадобится " + minDay + " дней.");
+        System.out.println("А если спортсмен будет худеть по 500 грамм в день то уйдет " + maxDay + " дней.");
+        double averageDays = (minDay + maxDay) /(2 * 1.0);
         System.out.println("В среднем может потребоваться " + averageDays + " день для похудения.");
 
         //Задание 5
